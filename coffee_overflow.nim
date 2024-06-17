@@ -13,28 +13,61 @@ var attempts = 0
 
 let coffeeStages = [
 """
-_
+|         |_
+|         | |
+|         | |
+|         |-
+|_________|
 """,
 """
-__
+|         |_
+|         | |
+|     )   | |
+|    (    |-
+|#########|
 """,
 """
-___
+|         |_
+|    (    | |
+|     )   | |
+|#########|-
+|#########|
 """,
 """
-____
+|     )   |_
+|    (    | |
+|#########| |
+|#########|-
+|#########|
 """,
 """
-_____
+    ( 
+|    )    |_
+|#########| |
+|#########| |
+|#########|-
+|#########|
 """,
 """
-______
+      )
+     (
+|#########|_
+|#########| |
+|#########| |
+|#########|-
+|#########|
 """,
 """
-_______
+    (
+     )
+###########
+#|#########|_
+#|#########| |
+#|#########| |
+#|#########|-
+#|#########|
 """
 ]
-#ascii art à améliorer#
 
 proc displayGame() =
   echo coffeeStages[attempts]
@@ -62,7 +95,6 @@ while attempts < 6 and guessedWord != secretWord:
   else:
     echo "Veuillez entrer une seule lettre."
 
-# Fin du jeu
 if guessedWord == secretWord:
   echo "Félicitations ! Tu as trouvé le mot : ", secretWord
 else:
