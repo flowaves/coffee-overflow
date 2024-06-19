@@ -1,5 +1,5 @@
 # Coffee Overflow
-Based on the hangman game, except that the hangman is replaced by an overflowing coffee, a reference to **Le café des devs server ;)**
+Based on the hangman game, except that the hangman is replaced by an overflowing coffee, a reference to **Le café des devs** server ;)
 
 ## Installation
 Nothing could be easier, simply compile and run :

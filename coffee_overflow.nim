@@ -1,5 +1,7 @@
 import os, strutils, random
 
+let debug = false
+
 let words = [
   "bug", "commit", "merge", "push", "pull", "fork", "clone", "issue", "branch",
   "deploy", "compile", "debug", "syntax", "runtime", "variable", "function", 
@@ -25,48 +27,48 @@ let coffeeStages = [
 |         | |
 |     )   | |
 |    (    |-
-|#########|
+|█████████|
 """,
 """
 |         |_
 |    (    | |
 |     )   | |
-|#########|-
-|#########|
+|█████████|-
+|█████████|
 """,
 """
 |     )   |_
 |    (    | |
-|#########| |
-|#########|-
-|#########|
+|█████████| |
+|█████████|-
+|█████████|
 """,
 """
     ( 
 |    )    |_
-|#########| |
-|#########| |
-|#########|-
-|#########|
+|█████████| |
+|█████████| |
+|█████████|-
+|█████████|
 """,
 """
       )
      (
-|#########|_
-|#########| |
-|#########| |
-|#########|-
-|#########|
+|█████████|_
+|█████████| |
+|█████████| |
+|█████████|-
+|█████████|
 """,
 """
     (
      )
-###########
-#|#########|_
-#|#########| |
-#|#########| |
-#|#########|-
-#|#########|
+███████████
+█|█████████|_
+█|█████████| |
+█|█████████| |
+█|█████████|-
+█|█████████|
 """
 ]
 
@@ -89,22 +91,24 @@ proc delayPrint(message: string) =
         stdout.write(c)
         stdout.flushFile()
         sleep(70) 
+if debug == false:
+  delayPrint("Welcome to Coffee Overflow!")
+  sleep(1500)
+  echo ""
+  delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows.")
+  sleep(2000)
+  echo ""
+  delayPrint("The words are related to the world of programming.")
+  sleep(1000)
+  echo ""
+  delayPrint("Let's find out if you're a true dev or not ;)")
+  sleep(800)
+  echo ""
+  delayPrint("Good luck!")
+  sleep(300)
+  echo ""
 
-delayPrint("Welcome to Coffee Overflow!")
-sleep(1500)
-echo ""
-delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows.")
-sleep(2000)
-echo ""
-delayPrint("The words are related to the world of programming.")
-sleep(1000)
-echo ""
-delayPrint("Let's find out if you're a true dev or not ;)")
-sleep(800)
-echo ""
-delayPrint("Good luck!")
-sleep(300)
-echo ""
+
 
 while attempts < 6 and guessedWord != secretWord:
   displayGame()
