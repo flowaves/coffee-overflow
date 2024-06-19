@@ -1,2 +1,2 @@
-# coffee-overflow
-Basé sur le jeu du pendu, sauf que le pendu est remplacé par un café qui déborde, référence au café des devs (;
+# Coffee Overflow
+Based on the hangman game, except that the hangman is replaced by an overflowing coffee, a reference to Le café des devs ;)
