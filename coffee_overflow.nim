@@ -2,12 +2,15 @@ import os, strutils, random
 
 let debug = false
 
-let words = [
-  "bug", "commit", "merge", "push", "pull", "fork", "clone", "issue", "branch",
-  "deploy", "compile", "debug", "syntax", "runtime", "variable", "function", 
-  "loop", "array", "object", "class", "module", "script", "server", "client", 
-  "api", "token", "cookie", "session", "error", "refactor"
-]
+proc loadWords(): seq[string] =
+  var words: seq[string] = @[]
+  if not fileExists("words.txt"):
+    quit("The file 'words.txt' does not exist.")
+  for line in lines("words.txt"):
+    words.add(line.strip)
+  return words
+
+let words = loadWords()
 
 randomize()
 let secretWord = words[rand(words.len)]
@@ -98,15 +101,15 @@ proc clearConsole() =
 if debug == false:
   clearConsole()
 
-  delayPrint("Welcome to Coffee Overflow!")
+  delayPrint("Welcome to Coffee Overflow !")
   sleep(1500)
   echo ""
 
-  delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows.")
+  delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows !")
   sleep(2000)
   echo ""
 
-  delayPrint("The words are related to the world of programming.")
+  delayPrint("The words are related to the world of programming")
   sleep(1000)
   echo ""
 
