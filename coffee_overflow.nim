@@ -91,26 +91,39 @@ proc delayPrint(message: string) =
         stdout.write(c)
         stdout.flushFile()
         sleep(70) 
+
+proc clearConsole() =
+  echo "\x1b[2J\x1b[H"
+
 if debug == false:
+  clearConsole()
+
   delayPrint("Welcome to Coffee Overflow!")
   sleep(1500)
   echo ""
+
   delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows.")
   sleep(2000)
   echo ""
+
   delayPrint("The words are related to the world of programming.")
   sleep(1000)
   echo ""
+
   delayPrint("Let's find out if you're a true dev or not ;)")
   sleep(800)
   echo ""
+
   delayPrint("Good luck!")
   sleep(300)
   echo ""
 
+  clearConsole()
+
 
 
 while attempts < 6 and guessedWord != secretWord:
+  clearConsole()
   displayGame()
   echo "Guess a letter: "
   let input = stdin.readLine()
@@ -123,5 +136,7 @@ while attempts < 6 and guessedWord != secretWord:
 if guessedWord == secretWord:
   echo "Congratulations! You guessed the word: ", secretWord
 else:
+  clearConsole()
+  echo coffeeStages[6]
   echo "Sorry, you lost. You must be a false developer !"
   echo "The word was: ", secretWord
