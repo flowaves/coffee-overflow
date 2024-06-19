@@ -100,7 +100,7 @@ delayPrint("The words are related to the world of programming.")
 sleep(1000)
 echo ""
 delayPrint("Let's find out if you're a true dev or not ;)")
-sleep(600)
+sleep(800)
 echo ""
 delayPrint("Good luck!")
 sleep(300)
@@ -119,4 +119,5 @@ while attempts < 6 and guessedWord != secretWord:
 if guessedWord == secretWord:
   echo "Congratulations! You guessed the word: ", secretWord
 else:
-  echo "Sorry, you lost. The word was: ", secretWord
+  echo "Sorry, you lost. You must be a false developer !"
+  echo "The word was: ", secretWord
