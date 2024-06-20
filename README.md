@@ -1,7 +1,31 @@
 # Coffee Overflow
 Inspired by the hangman game, except that the hangman is replaced by an overflowing coffee, a reference to **[Le café des devs](https://discord.gg/cafedesdevs) server ;)**
 
-![image](https://github.com/parencil/coffee-overflow/assets/106678916/118fcce8-3ad4-408a-8781-4d3833084015)
+
+The goal of the game is to guess the word by proposing letters **before the coffee overflows !**
+
+
+The words are related to **the world of programming**.
+
+
+Let's find out if you're a true dev or not ;)
+
+
+**Good luck !**
+
+### There are three difficulty modes
+1. **Expresso** (hard) 
+
+    ![image](https://github.com/parencil/coffee-overflow/assets/106678916/8b67ee6f-df9e-48d3-a7fd-f0487f21bdad)
+
+
+2. **Standard** (balanced)
+
+    ![image](https://github.com/parencil/coffee-overflow/assets/106678916/118fcce8-3ad4-408a-8781-4d3833084015)
+
+3. **Large** (easy)
+
+    ![image](https://github.com/parencil/coffee-overflow/assets/106678916/293a6605-341d-4934-a2d1-32bfa1c3f28e)
 
 ## Installation
 
