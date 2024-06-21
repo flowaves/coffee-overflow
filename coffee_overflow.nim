@@ -251,19 +251,19 @@ proc setup() =
       clearConsole()
 
       delayPrint("Welcome to Coffee Overflow !")
-      sleep(500)
+      sleep(400)
       echo ""
 
       delayPrint("The goal of the game is to guess the word by proposing letters before the coffee overflows !")
-      sleep(900)
+      sleep(800)
       echo ""
 
       delayPrint("The words are related to the world of programming.")
-      sleep(1400)
+      sleep(1000)
       echo ""
 
       delayPrint("Let's find out if you're a true dev or not ;)")
-      sleep(700)
+      sleep(600)
       echo ""
 
       delayPrint("Good luck !")
@@ -294,15 +294,18 @@ proc play() =
   sleep(400)
   echo "Select game difficulty : "
 
-  case readLine(stdin)
-  of "1":
-    maxAttempts = 3
-  of "2":
-    maxAttempts = 5
-  of "3":
-    maxAttempts = 8
-  else: 
-    delayPrint("Please enter a number between 1 and 3")
+  while maxAttempts notin {3, 5, 8}:
+    case readLine(stdin)
+    of "1":
+      maxAttempts = 3
+    of "2":
+      maxAttempts = 5
+    of "3":
+      maxAttempts = 8
+    else: 
+      delayPrint("Please enter a number between 1 and 3")
+      echo ""
+      echo "Select game difficulty : "
 
   while attempts < maxAttempts and guessedWord != secretWord:
     clearConsole()
